@@ -1,0 +1,48 @@
+<!--Dette er internal CSS i et HTML dokument-->
+  <!--Det er internal ettersom man skriver det i head-->
+
+<!doctype html>
+
+<html>
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <title>Eksempel på internal</title>
+
+    <style>
+
+      p{
+
+        color:blue;
+        font-family: 'Times New Roman', Times, serif;
+        width: 100;
+        height: 100;
+
+      }
+
+      h1{color:brown;}
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <!--Under her blir det påvirket av internal CSS-->
+
+    <p>Denne setningen blir også blå i nettleseren</p>
+
+    <h1>Denne setningen blir brun i nettleseren</h1>
+
+    <!--Under her tester jeg ut inline CSS-->
+
+    <p style="color:chartreuse">Denne setningen blir grønn i nettleseren, og nå er fargen som ble skrevet i head blitt overskrevet</p>
+
+    <p>Nå er det tilbake til blå igjen.</p>
+
+  </body>
+
+</html>
+
