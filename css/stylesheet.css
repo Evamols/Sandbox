@@ -13,19 +13,20 @@ body{
 /* =============== GLOBAL HEADER =============== */
 /*Vi har laget en id til hoved headeren*/
 #global-header{
-  display: flex; /*Hva gjør denne?*/
-  justify-content: space-between; /*All luften som er tilgjengelig blir brukt på å ha avstand mellom logo og lista*/
-  align-items: center; /*Lista blir sentrert i forhold til logoen?*/
+  display: flex; /*Flexbox (jeg tror dette er en del av flexbox) er et kraftig verktøy for å designe responsive og fleksible layouter som tilpasser seg innholdets størrelse og tilgjengelig plass. */
+  justify-content: space-between; /*All luften som er tilgjengelig blir brukt på å ha avstand mellom logo og lista. Plasserer logo til venstre og navigasjon til høyre*/
+  align-items: center; /*Vertikal sentrering av innholdet*/
+  padding: 1rem;
+
   /*Jeg vil endre på li som er inni ul, som er inni nav, som er inni global-header:*/
   nav{
     ul{
-      
       padding: 0; /*For å få den tettere mot margen*/
       margin: 0; /*For å få den tettere mot margen*/
       
       li{
         list-style: none; /*none: Nå forsvinner kulepunktene på lista*/
-        display: inline-block;
+        display: inline-block; /*Viser menyvalg horisontalt i stedet for vertikalt*/
       }
     }
   }
@@ -45,9 +46,11 @@ a {
 }
 
 .deal-section{
-  background-color:var(--basic-gray); /*Vi bruker variabelen som vi har laget for å velge farge*/
-  padding: 1 rem; 
+  background-color:var(--basic-gray); /*Vi bruker variabelen som vi har laget for å velge farge. Vi skriver "var" først*/
+  padding: 1rem; 
 }
+
+/* ========== HOVEDINNHOLD ========== */
 
 article{
   margin: 1rem 0;
@@ -58,19 +61,17 @@ article{
   padding: 1rem; /*padding er innvendig luft. Margin er utvendig??*/
 
   img{
-    width: 100%;
+    width: 100%;    /*Skalerer bildet til kortets bredde. Vi skriver det som nesta CSS.. Jeg vil endre på bilet som ligger inni article*/
   }
 }
 
-/*Jeg vil at bildet skal fylle hele innholdet på nettsiden. Vi skriver det som nesta CSS.
-Jeg vil endre på bilet som ligger inni article
-*/
 
+/*Vi endrer på klassen .btn. Dette er "legg i handlevogn"-knappen.*/
 .btn {
-  display: inline-block;
+  display: inline-block;        /*Tillater padding/bredde, men flyter i tekst??*/
   background-color: #000;
   color: #fff;
-  padding: 1rem;
-  border: none;
+  padding: 1rem;                /*Stor klikkflate*/
+  border: none;                 /* HVA: Fjerner standardkant for renere uttrykk */
 }
 
