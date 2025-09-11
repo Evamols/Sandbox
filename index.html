@@ -10,7 +10,7 @@
   </head>
   <body>
     <!--<h1>Første fil</h1>-->
-    <header>
+    <header id="global-header"> <!--Vi gir headeren en id-->
       <a href="index.html" id="mainlogo">LOGO</a>
       <nav>
         <ul>
@@ -19,7 +19,7 @@
         </ul>
       </nav>
     </header>
-    <section>
+    <section class="deal-section"> <!--Vi bruker klasse for at det kan gjenbrukes-->
       <h2>Crazy Gaming Deals</h2>
       <img src="https://picsum.photos/200/300?grayscale" alt="En kul hvalross som er i gråskala.">
       <p>
@@ -93,7 +93,7 @@
           <input type="email" placeholder="ola.nordman@hiof.no..."/>
         </label>
 
-        <input type="submit" value="Meld meg på"/>
+        <input class="btn" type="submit" value="Meld meg på"/> <!--Vi ga den en klasse også-->
 
         <label for="age-validation">Bekreft alder over 18</label>
         <input type="checkbox" id="age-validation" />
