@@ -21,11 +21,12 @@
     </header>
     <section class="deal-section"> <!--Vi bruker klasse for at det kan gjenbrukes-->
       <h2>Crazy Gaming Deals</h2>
-      <img src="https://picsum.photos/200/300?grayscale" alt="En kul hvalross som er i gråskala.">
+      <!-- <img src="https://picsum.photos/700/500?grayscale" alt="En kul hvalross som er i gråskala.">-->
+
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
-      <a href="offers.html">Se tilbud</a>
+      <a href="offers.html" class="btn">Se tilbud</a>
     </section>
     <main>
       <section>
@@ -84,7 +85,7 @@
         </article>
       </section>
     </main>
-    <aside>
+    <aside class="side-container">
       <h4>Meld deg inn i spællklubben</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <form>
@@ -95,11 +96,13 @@
 
         <input class="btn" type="submit" value="Meld meg på"/> <!--Vi ga den en klasse også-->
 
-        <label for="age-validation">Bekreft alder over 18</label>
-        <input type="checkbox" id="age-validation" required/> <!--required: man må trykke på boksen før man kan melde seg på-->
-
+        <label class="age-check" for="age-validation">Bekreft alder over 18
+          <input type="checkbox" id="age-validation" required/> <!--required: man må trykke på boksen før man kan melde seg på-->
+        </label>
       </form>
     </aside>
+
+    <footer>Webutvikling 2025</footer>
 
   </body>
 </html>

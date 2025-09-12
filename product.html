@@ -6,6 +6,9 @@
         <!--Viktig med denne taggen under også (meta name), slik at det blir framvist riktig i forhold til hvilken skjermstørrelse den blir vist i.-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Red Dead Redemption</title> <!--Navnen til fanen. Det første opplesningsverktøy møter på-->
+        
+        <link rel="stylesheet" type="text/css" href="css/stylecheet.css"> <!--Linker det til CSSen-->
+
         <!--Style: Det vi skriver under her (CSS?) er internal (aka bad practice), men vi viser det nå. Det er bedre å gjøre det external-->
         <!--Type selektor er hvilken type tag vi vil designe-->
         <!--body: endrer om bodyen.-->
@@ -27,8 +30,9 @@
     </head>
     <body>
         <!--Nå kopierer vi logo og meny (header) fra onsdag uke 36 for å passe på at det er likt på alle nettsider-->
-        <header>
-            <a href="index.html">LOGO</a>
+        
+        <header id="global-header"> <!--Vi gir headeren en id-->
+            <a href="index.html" id="mainlogo">LOGO</a>
             <nav>
                 <ul>
                 <li><a href="index.html">Hjem</a></li>
@@ -36,9 +40,21 @@
                 </ul>
             </nav>
         </header>
+        
+        <!--Gammel header-->
+        <!--<header>
+            <a href="index.html">LOGO</a>
+            <nav>
+                <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                </ul>
+            </nav>
+        </header> -->
+
         <main>
             <h1>Red Dead Redemption</h1>
-            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643" alt="Red Dead Redemption">
+            <img src="img/RedDead.jpg" alt="Red Dead Redemption">
             <table>
                 <tr>
                     <th>Overskrift for kolonne 1</th>
@@ -66,6 +82,7 @@
                 </tr>
             </table>
         </main>
+        <footer>Webutvikling 2025</footer>
 
     </body>
 
