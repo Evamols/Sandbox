@@ -1,3 +1,5 @@
+/*uke 37 fredag*/
+
 :ROOT{
   /*Vi danner variabler ved å ta -- før variabelnavnet.*/
   --basic-gray: #efefefef;
@@ -16,13 +18,6 @@ body{
 
 #page-container{
   display:grid;
-  /*Metode 1 grid, men det er kommentert ut*/
-  /* grid-template-areas: "header header header"; : Det inni anførselstegn er variabelnavn, men bør ha intuative navn. I dette eksempelet har det ingenting med headertaggen å gjøre.*/
-  /*grid-template-areas: "header" "hero" "main" "aside" "footer";*/ /*metode 1*/
-
-  /*Her er metode 2 grid:*/
-  grid-template-columns:1fr;
-  grid-template-rows: auto auto auto auto auto;
 }
 
 /* =============== GLOBAL HEADER =============== */
@@ -32,15 +27,6 @@ body{
   justify-content: space-between; /*All luften som er tilgjengelig blir brukt på å ha avstand mellom logo og lista. Plasserer logo til venstre og navigasjon til høyre*/
   align-items: center; /*Vertikal sentrering av innholdet*/
   padding: 1rem;
-  
-  /*grid-area: header;*/ /*Metode 1 grid*/
-  
-  /*Metode 2 grid*/
-  grid-column-start: 1;
-  grid-column-end: 2;
-
-  grid-row-start:1;
-  grid-row-end: 2;
 
   /*Jeg vil endre på li som er inni ul, som er inni nav, som er inni global-header:*/
   nav{
@@ -80,15 +66,6 @@ a {
   height: 50vh; /*vh hjelper når man har små vinduer*/
   min-height: 200px;
 
-  /*Metode 1 grid*/
-  /*grid-area: hero;*/
-
-  /*Metode 2 grid*/
-  grid-column-start: 1;
-  grid-column-end: 2;
-
-  grid-row-start: 2;
-  grid-row-end: 3;
 
   /*Endrer på bildet inni deal section*/
   /*img{
@@ -116,14 +93,6 @@ main{
   max-width: 1200px;
   width: 100%;
   margin: 1rem auto; /*Hva betyr auto?*/
-  /*grid-area: main;*/
-
-  /*Metode 2 grid*/
-  grid-column-start: 1;
-  grid-column-end: 2;
-
-  grid-row-start: 3;
-  grid-row-end: 4;
 
   section{
     h2{
@@ -164,14 +133,6 @@ article{
 .side-container{
   background-color: var(--basic-gray);
   padding: 1rem;
-  /*grid-area: aside;*/
-
-  /*Metode 2 grid*/
-  grid-column-start: 1;
-  grid-column-end: 2;
-
-  grid-row-start: 4;
-  grid-row-end: 5;
 
   form{
     input{
@@ -195,62 +156,4 @@ footer{
   color: #fff;
   padding: 1rem;
   min-height: 150px;
-  /*grid-area: footer;*/
-
-  /*Metode 2 grid*/
-  grid-column-start: 1;
-  grid-column-end: 2;
-
-  grid-row-start: 5;
-  grid-row-end: 6;
-}
-
-
-/*Dette er metode nr. 1*/
-/*Endrer på hvordan det ser ut i forhold til hvilken skjermbredde*/
-/*Gjelder for skjerm "and" regler det skal gjelde for*/
-/*Det gjelder ingen regler for størrelse på brytningspspunktet. Det beste er å teste selv. Når der det innholdet mitt blir stygt i det jeg justerer på vinduet av skjermen?*/
-/*Nå gjelder disse reglene under når vidden er over 600px*/
-@media only screen and (min-width: 600px){
-  
-  #page-container{ /*Må passe på at man bruker samme variabelnavn som tidligere: Header, hero, main etc.*/
-    
-    /*Metode 2 grid*/
-    grid-template-columns: 1fr 1fr 0.5fr;
-    grid-template-rows: repeat(4, auto);
-    
-    /*Metode 1 grid*/
-    /*grid-template-areas: "header header header"
-                        "hero hero hero"
-                        "main main aside"
-                        "footer footer footer";
-    grid-template-columns: 1fr 1fr 0.5fr; /*Bredde på kolonner*/
-  }
-
-  /*Metode 2 grid*/
-  #global-header{
-    grid-column-end: 4;
-  }
-
-  .deal-section{
-    grid-column-end: 4;
-  }
-
-  main{
-    grid-column-end: 3;
-  }
-
-  .side-container{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-
-  footer{
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
-
 }
