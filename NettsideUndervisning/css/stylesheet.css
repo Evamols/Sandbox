@@ -141,14 +141,20 @@ main{
 article{
   margin: 1rem 0;
   border:1px solid #5a5050; /*Sette en firkant rundt artiklene*/
-  max-width: 400px;
-  width: 100%;
+  width: 31%;
   min-width: 250px;
   padding: 1rem; /*padding er innvendig luft. Margin er utvendig??*/
+  flex-grow: 1;
+  max-width: 800px;
 
   img{
     width: 100%;    /*Skalerer bildet til kortets bredde. Vi skriver det som nesta CSS.. Jeg vil endre på bilet som ligger inni article*/
   }
+}
+
+.category-card{
+  width: 33%;
+  flex-grow: 1;
 }
 
 
@@ -240,6 +246,33 @@ footer{
     grid-column-end: 3;
   }
 
+  article{
+  margin: 1rem 0;
+  border:1px solid #5a5050; /*Sette en firkant rundt artiklene*/
+  width: 31%;
+  min-width: 250px;
+  padding: 1rem; /*padding er innvendig luft. Margin er utvendig??*/
+  flex-grow: 1;
+  max-width: 800px;
+
+  img{
+    width: 100%;    /*Skalerer bildet til kortets bredde. Vi skriver det som nesta CSS.. Jeg vil endre på bilet som ligger inni article*/
+  }
+  }
+
+.category-card{
+  width: 33%;
+  flex-grow: 0;
+  }
+
+  .grow-1{
+    flex-grow: 1;
+  }
+
+  .grow-2{
+    flex-grow: 2;
+  }
+
   .side-container{
     grid-column-start: 3;
     grid-column-end: 4;
@@ -275,39 +308,3 @@ footer{
 
   }
 
-/*Slik kunne man gjort det med grid (men det er best å gjøre det med flex)*/
-/*.flex-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /*Jeg vil ha 3 kolonner som er 1 fr bred.*/
-  /*grid-template-rows: repeat (3, auto); /*To rader med auto høyde*/
-
-  /*h2{
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
-}*/
-
-/*Endrer på "Kategorier"*/
-section.flex-grow{ /*Her endrer man bare på seksjon med klassen flex-grow???*/
-    justify-content: flex-start; /*Boksene legger seg til venstre*/
-
-    article{
-      max-width: 900px; /*Bestemmer maxbredden på artikkelkortene*/
-      min-width: 100px;
-      width: 31%; /*Dette er 31% av container-størrelsen. Altså 33% av section i dette tilfellet. Det kan være problematisk å bruke %, ettersom f.eks. 33% av noe veldig smalt, blir super smalt. Da kan også bruke min-width*/
-    }
-
-    article.grow-1{
-      flex-grow: 2;
-    }
-
-}
-
-/*Her får man litt puslespilloppsett på kategoriene*/
-.grow-1{
-  flex-grow: 2;
-}
-
-.grow-2{
-  flex-grow: 3;
-}
