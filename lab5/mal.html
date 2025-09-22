@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <title>Navn på fanen</title>
+</head>
+<body>
+    <header id="global-header"> <!--Menyen vår på toppen av nettsiden-->
+        <a href="index.html">Logo</a>
+        <nav> <!--Bruker nav-taggen for å registrere at det er navigasjon (samling med linker)-->
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="skriv_link_her">Nettside-mal</a></li>
+                <li><a href="https://hiof.instructure.com/courses/9928/assignments/46094" target="_blank">Labøvelse</a></li> <!-- target="_blank" = åpner opp i ny fane -->
+                <li><a href="skriv_link_her">Kontakt oss</a></li> <!--LAG EN KONTAKT OSS LINK SOM FØRER OSS TIL FOOTEREN-->
+            </ul>
+        </nav>
+    </header>
+    <main> <!--Hovedinnholdet står under main-->
+        <h1>Mal</h1>
+    </main>
+
+    
+    <footer> <!--Footer er helt nederst-->
+        <article>
+            <h4>Om nettsiden:</h4>
+            <p>Navn: Eva Marie Olsen</p> <!--Skal vi skrive dette som en liste?-->
+            <p>Epost: evamo@hiof.no</p>
+        </article>
+        <article>
+            <h4>Kontaktskjema:</h4>
+            <form action="hvor_info_sendes_eller_hva_som_skjer_etter_skjemaet_er_sendt">
+                <label>
+                    Navn:
+                    <input type="text" placeholder="Ola Nordman"/>
+                </label>
+                <label>
+                    Emne:
+                    <input type="text"/>
+                </label>
+                <label>
+                    Epost:
+                    <input type="email" placeholder="ola.nordman@hiof.no..."/>
+                </label>
+                <label>
+                    Melding:
+                    <textarea>
+
+                    </textarea>
+                </label>
+            </form>
+        </article>
+    </footer>
+</body>
+</html>
