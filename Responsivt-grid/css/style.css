@@ -1,0 +1,98 @@
+/*root brukes til å definere variabler*/
+:root{
+    --main: #f5efe6; /*variabel som jeg skal bruke på main*/
+    --aside: #e8dfca;
+    --header: #cbdceb;
+    --foter: #6d94c5;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /*Det blir ingen marg*/
+    min-height: 100vh; /*Kode: Vannmelon: Det er for at det ikke skal være hvitt/luft nederst ettersom vi har lite innhold*/
+    display: flex; /*Kode: Vannmelon*/
+}
+
+#grid-container{
+    width: 100%; /*Kode: Vannmelon*/
+    height: inherit; /*Kode: Vannmelon*/
+    display: grid;
+    grid-template-areas:    "topp"
+                            "hovedinnhold" 
+                            "sideinnhold" 
+                            "bunn"
+}
+
+header, main, aside, footer{
+    padding: 1rem;
+}
+
+header{
+    background-color: var(--header); /*Skriver var for variabel*/
+    grid-area: topp;
+}
+
+main{
+    background-color: var(--main);
+    grid-area: hovedinnhold;
+}
+
+aside{
+    background-color: var(--aside);
+    grid-area: sideinnhold;
+}
+
+footer{
+    background-color: var(--foter);
+    grid-area: bunn;
+}
+
+.hidden{
+    display: none;
+}
+
+/*Regelsettet under er bare for mobil*/
+@media only screen and (max-width: 600px){
+    #menu{
+        background-color: antiquewhite;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 2rem;
+    }
+}
+
+/*Når vinduet er likt som eller høyere enn 600px, så gjelder det under*/
+@media only screen and (min-width:600px){
+    #grid-container{
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:    "topp topp"
+                                "hovedinnhold sideinnhold"
+                                "bunn bunn";
+    }
+
+    header{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .hidden{
+        display: inline-block;
+    }
+
+    #menu{
+        ul{
+            display:flex; /*Lar menypunktene ligge etterhverandre, i stedet for over hverandre*/
+            gap: 1rem;
+        }
+    }
+
+    #ham{
+        display: none; /*Jeg vil ikke at hamburgeren skal synes*/
+    }
+}
