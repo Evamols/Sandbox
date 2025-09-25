@@ -1,0 +1,91 @@
+<!--Vi skal lage et av produktsidene til det vi lagde uke 36 onsdag-->
+<!DOCTYPE html> <!--Forteller at nå kommer det html-->
+<html lang="nb"> <!--Gir den attributted lang for å fortelle hva slags språk. "nb" står for norsk bommål-->
+    <head> <!--Head: Metadata og bakgrunnsinformasjon. Hvilket tegnsett som skal bli brukt på nettsiden. Skjermstørrlser-->
+        <meta charset="UTF-8">
+        <!--Viktig med denne taggen under også (meta name), slik at det blir framvist riktig i forhold til hvilken skjermstørrelse den blir vist i.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Red Dead Redemption</title> <!--Navnen til fanen. Det første opplesningsverktøy møter på-->
+        
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> <!--Linker det til CSSen-->
+
+        <!--Style: Det vi skriver under her (CSS?) er internal (aka bad practice), men vi viser det nå. Det er bedre å gjøre det external-->
+        <!--Type selektor er hvilken type tag vi vil designe-->
+        <!--body: endrer om bodyen.-->
+        <!--Border: 1px betyr at det skal være en tynn strek rundt. Solid betyr at den er solid og ikke f.eks. prikkete border.-->
+        <!--th, td: betyr at vi vil style både th og td. Padding er hvor mye luft du vil ha rundt-->
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            table {
+                border: 1px solid #000;
+            }
+            th, td {
+                border: 1px solid #fe2727;
+                padding: 1rem;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--Nå kopierer vi logo og meny (header) fra onsdag uke 36 for å passe på at det er likt på alle nettsider-->
+        
+        <header id="global-header"> <!--Vi gir headeren en id-->
+            <a href="index.html" id="mainlogo">LOGO</a>
+            <nav>
+                <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!--Gammel header-->
+        <!--<header>
+            <a href="index.html">LOGO</a>
+            <nav>
+                <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                </ul>
+            </nav>
+        </header> -->
+
+        <main>
+            <h1>Red Dead Redemption</h1>
+            <img src="img/RedDead.jpg" alt="Red Dead Redemption">
+            <table>
+                <tr>
+                    <th>Overskrift for kolonne 1</th>
+                    <th>Overskrift for kolonne 2</th>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>Red Dead Redemption</td>
+                </tr>
+                <tr>
+                    <td>Genre</td>
+                    <td>Action, Adventure</td>
+                </tr>
+                <tr>
+                    <td>Developer</td>
+                    <td>Rockstar Games</td>
+                </tr>
+                <tr>
+                    <td>Publisher</td>
+                    <td>Rockstar Games</td>
+                </tr>
+                <tr>
+                    <td>Release date</td>
+                    <td>5. desmber 2019</td>
+                </tr>
+            </table>
+        </main>
+        <footer>Webutvikling 2025</footer> <!--Min footer ser ikke bra ut med CSS-->
+
+
+
+    </body>
+
+</html>

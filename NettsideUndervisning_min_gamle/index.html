@@ -1,0 +1,123 @@
+<!--Uke 38 man-->
+
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <title>Forside - Dataspæll</title>
+  </head>
+  <body>
+    <div id="page-container">
+    <!--<h1>Første fil</h1>-->
+    <header id="global-header"> <!--Vi gir headeren en id-->
+      <a href="index.html" id="mainlogo">LOGO</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="product.html">Produkter</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="deal-section"> <!--Vi bruker klasse for at det kan gjenbrukes-->
+      <h2>Crazy Gaming Deals</h2>
+      <!-- <img src="https://picsum.photos/700/500?grayscale" alt="En kul hvalross som er i gråskala.">-->
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <a href="offers.html" class="btn">Se tilbud</a>
+    </section>
+    <main>
+      <section class="flex-container flex-grow"> <!--To klasser. Kanskje bare fjerne flex-grow klassen ettersom det klussa til.-->
+        <h2>Populære Spæll</h2>
+        
+        <article class="product-card">
+          <img 
+            src="https://picsum.photos/200/300?grayscale" 
+            alt="Red Dead Redemption"
+            />
+          <h3>Red Dead Redemption</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>kr 499</p>
+          <a href="product.html" class="btn">Legg i handlevogn</a>
+        </article>
+        
+        <article class="product-card">
+          <img 
+            src="https://picsum.photos/200/300?grayscale" 
+            alt="Spill 2"
+            />
+          <h3>Spill 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>kr 499</p>
+          <a href="product.html" class="btn">Legg i handlevogn</a>
+        </article>
+
+        <article class="product-card">
+          <img 
+            src="https://picsum.photos/200/300?grayscale" 
+            alt="Spill 3"
+            />
+          <h3>Spill 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>kr 499</p>
+          <a href="product.html" class="btn">Legg i handlevogn</a>
+        </article>
+
+        <article class="product-card">
+          <img 
+            src="https://picsum.photos/200/300?grayscale" 
+            alt="Spill 4"
+            />
+          <h3>Spill 4</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>kr 499</p>
+          <a href="product.html" class="btn">Legg i handlevogn</a>
+        </article>
+      </section>
+      
+      
+      <section class="flex-container flex-grow"> <!--La til to klasser-->
+        <h2>Kategorier</h2>
+        
+        <article class="grow-1 category-card"> <!--Jeg vil at den skal vokse litt i CSS-->
+          <h3><a href="action.html">Action</a></h3>
+        </article>
+      
+        <article class="category-card">
+          <h3><a href="nintendo.html">Nintendo</a></h3>
+        </article>
+
+        <article class="category-card">
+          <h3><a href="rollespill.html">Rollespill</a></h3>
+        </article>
+
+        <article class="grow-2 category-card"> <!--grow 2: Jeg vil at den skal vokse litt i CSS-->
+          <h3><a href="fantasy.html">Fantasy</a></h3>
+        </article>
+      </section>
+    </main>
+
+    <aside class="side-container">
+      <h4>Meld deg inn i spællklubben</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <form>
+        <label>
+          E-post:
+          <input type="email" placeholder="ola.nordman@hiof.no..."/>
+        </label>
+
+        <input class="btn" type="submit" value="Meld meg på"/> <!--Vi ga den en klasse også-->
+
+        <label class="age-check" for="age-validation">Bekreft alder over 18
+          <input type="checkbox" id="age-validation" required/> <!--required: man må trykke på boksen før man kan melde seg på-->
+        </label>
+      </form>
+    </aside>
+
+    <footer>Webutvikling 2025</footer>
+    </div>
+  </body>
+</html>
