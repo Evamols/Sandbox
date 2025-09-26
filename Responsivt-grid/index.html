@@ -23,6 +23,20 @@
             </header>
             <main>
                 <h1>Main</h1>
+                <section>
+                    <h2>Nyeste bilder</h2>
+                    <article>
+                        <h3>Katt</h3>
+                        <picture>
+                            <source media="(min-width: 1400px)" srcset="img/cat-1920.jpg"> <!--Media: Hvilken vindustørrelse dette gjelder for: større enn 1400px-->
+                            <source media="(min-width: 900px)" srcset="img/cat-1280.jpg">
+                            <img src="img/cat-640.jpg" alt="katte bilde"> <!--Her bør det minste bildet stå, slik at det er default: Mobile first-->
+                        </picture>
+                    </article>
+                    <artile>
+                        <h3>Hund</h3>
+                    </artile>
+                </section>
             </main>
             <aside>
                 <h3>Aside</h3>
