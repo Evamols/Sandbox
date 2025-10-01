@@ -1,0 +1,14 @@
+
+h2{
+    font-size: clamp(30px, 8vw + 1rem, 100px); /*Man legger til 1 rem også for at det ikke skal bli problemer når man zoomer inn*/
+}
+
+h3{
+    font-size: clamp(16px, 6vw + 1rem, 50px);
+}
+
+p{
+    font-size: clamp(16px, 3vw + 1rem, 30px);
+}
+
+

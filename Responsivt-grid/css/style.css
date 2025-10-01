@@ -16,7 +16,7 @@
 
 /*Setter en fontstørrelse som skal være responsiv.*/
 html{
-    font-size: clamp(16, 1em + 1vw, 30px); /*Fontstørrelsen skal aldri bli mindre enn 16px og større enn 30px. Og den skal kalkuleres på 1em + 1vw*/
+    font-size: clamp(16px, 1em + 1vw, 30px); /*Fontstørrelsen skal aldri bli mindre enn 16px og større enn 30px. Og den skal kalkuleres på 1em + 1vw*/
 }
 
 body{
