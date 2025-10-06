@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Linker html til fontawesome (for å brukle ikoner og fonter). Husk å laste ned ikoner-mappa også.-->
+    <link href="icons/css/fontawesome.css" rel="stylesheet">
+    <link href="icons/css/brands.css" rel="stylesheet" >
+    <link href="icons/css/solid.css" rel="stylesheet" >
+    <link href="icons/css/sharp-thin.css" rel="stylesheet" >
+    <link href="icons/css/sharp-duotone-thin.css" rel="stylesheet" >
+
+    <!--Linke til CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Studieuke</title>
+</head>
+<body>
+    <div id="grid-container">
+        <header>
+            <nav>
+                <a href ="index.html">Logo</a>
+                
+                <div class="group"> <!--Vi bruker div ettersom vi skal endre deisgn (fokus på det visuelle)-->
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>  
+                    <button class="icon-btn" id="ham"><i class="fa-solid fa-bars"></i></button> 
+                </div>
+            
+                <!--Dette skal senere bare vises i desktop-->
+                <ul id="menu" class="hidden">
+                    <li><a href="#">Hjem</a></li>
+                    <li><a href="#">Om oss</a></li>
+                    <li><a href="#">Tjenester</a></li>
+                    <li><a href="#">Kontakt oss</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua.</h2>
+                <a href="#" class="btn">Read more</a>
+            </section>
+        </header>
+        
+        <main>
+            <article>
+                <figure>
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="https://picsum.photos/1200/1200">
+                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/900">
+                        <img src="https://picsum.photos/600/600" alt="">
+                    </picture>
+                </figure>
+                <h2>Labore et dolore magna aliqua.</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            </article>
+
+            <article>
+                <figure>
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="https://picsum.photos/1200/1200">
+                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/900">
+                        <img src="https://picsum.photos/600/600" alt="">
+                    </picture>
+                </figure>
+                <h2>Labore et dolore magna aliqua.</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            </article>
+        </main>
+
+        <aside>
+            <h3>Labore et dolore magna aliqua</h3>
+            <article>
+                <i class="fa-solid fa-cat side-ikon"></i>
+                <div> <!--Bruker div ettersom jeg skal fikse design i css-->
+                    <h4>Labore et dolore magna aliqua.</h4>
+                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                </div>
+            </article>
+
+            <article>
+                <i class="fa-solid fa-dog side-ikon"></i>
+                <div>
+                    <h4>Labore et dolore magna aliqua.</h4>
+                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                </div>
+            </article>
+
+            <article>
+                <i class="fa-solid fa-hippo side-ikon"></i>
+                <div>
+                    <h4>Labore et dolore magna aliqua.</h4>
+                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                </div>
+            </article>
+
+        </aside>
+
+        <!--Dette skal senere bare vises i desktop-->
+        <footer class="hidden">
+            <article>
+                <h4>Produkter</h4>
+                <ul>
+                    <li><a href="#">Sko</a></li>
+                    <li><a href="#">Klær</a></li>
+                    <li><a href="#">Tilbehør</a></li>
+                    <li><a href="#">Nye varer</a></li>
+                    <li><a href="#">Bestselgere</a></li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Sport</h4>
+                <ul>
+                    <li><a href="#">Fotball</a></li>
+                    <li><a href="#">Basketball</a></li>
+                    <li><a href="#">Golf</a></li>
+                    <li><a href="#">Fitness og Trening</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Brukerstøtte</h4>
+                <ul>
+                    <li><a href="#">Hjelp og kundeservice</a></li>
+                    <li><a href="#">Levering</a></li>
+                    <li><a href="#">Retur og refusjon</a></li>
+                    <li><a href="#">Størrelsestabell</a></li>
+                    <li><a href="#">Store finder</a></li>
+                </ul>
+            </article>
+        </footer>
+
+    </div>
+</body>
+</html>
