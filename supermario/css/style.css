@@ -37,10 +37,10 @@ main {
     bottom: 53px;
     z-index: 999;
     animation-name: marioRunning, movingMario, marioDies;
-    animation-duration: 0.3s, 3s, 1;
+    animation-duration: 0.3s, 3s, 1s;
     animation-iteration-count: infinite, 1, 1; /*Hvor mange ganger skal den få holde på?*/
     animation-fill-mode: none, forwards, forwards; /*Hva som skjer når animasjonen avsluttes*/
-    animation-delay: 0s, 0s, 3s;
+    animation-delay: 0s, 0s, 2.6s;
 }
 
 #gompa {
@@ -100,6 +100,11 @@ main {
     }
 
     80%{
+        left: 800px;
+        bottom: 53px;
+    }
+
+    100%{
         left: 800px;
         bottom: 53px;
     }
