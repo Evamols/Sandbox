@@ -1,0 +1,9 @@
+@use 'fonts'; /*Henter inn partial som heter fonts*/
+@use 'colors'; /*Henter inn partial som heter colors*/
+@use 'layout'; /*Henter inn partial*/
+
+body{
+    margin: 0;
+    font-family: fonts.$main-font; /*Henter inn variabelen $main-font fra partialen _fonts.*/
+    color: colors.$primary-color; /*Henter inn variabel fra partialen _colors.*/
+}

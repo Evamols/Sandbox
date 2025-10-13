@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*Her skal fontvariablene stå*/
+/*Henter inn partial som heter fonts*/
+/*Henter inn partial som heter colors*/
+.flex, .flex-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  /*arver CSS-reglene fra klassen .flex*/
+  flex-direction: column;
+}
+
+/*Henter inn partial*/
+body {
+  margin: 0;
+  font-family: arial, sans-serif; /*Henter inn variabelen $main-font fra partialen _fonts.*/
+  color: #303030; /*Henter inn variabel fra partialen _colors.*/
+}/*# sourceMappingURL=main.css.map */
