@@ -1,6 +1,57 @@
-#grid-layout {
+#page-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+}
+
+#logo-area {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#navigasjonsmeny {
+  position: sticky;
+  bottom: 0;
+  overflow: hidden;
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+
+main {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+footer {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+#categories {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 1rem;
+  grid-template-rows: auto auto auto;
+}
+#categories h2 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+#categories #el {
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+#categories #fashion {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+#categories #home {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
 }/*# sourceMappingURL=main.css.map */

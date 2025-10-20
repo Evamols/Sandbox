@@ -2,32 +2,6 @@
 
 // Lag minst to mixins. Eksempler på dette kan være et mixin for flexbox/grid-oppsett.
 
-// --------- MIXIN FOR FLEXBOX ----------------
 
-// Hva: Setter opp et CSS Grid-layout med kolonner, rader og mellomrom.
-// Hvorfor: Gjenbrukbart oppsett for ulike grid-konfigurasjoner uten å duplisere kode.
-// Hvordan: Tar inn $columns og $rows og mapper dem til grid-egenskaper.
-// =========================
-@mixin alterLayout($columns, $rows){
-    display: grid;                         // Hva: Aktiverer CSS Grid.
-                                           // Hvorfor: Grid gir presis kontroll på layout.
-                                           // Hvordan: Setter display til grid på elementet.
+// --------- MIXIN FOR GRID ----------------
 
-    grid-template-columns: $columns;       // Hva: Definerer kolonneoppsettet.
-                                           // Hvorfor: Gjør det mulig å variere kolonnebredder dynamisk.
-                                           // Hvordan: Bruker mixin-parameteren $columns.
-
-    grid-template-rows: $rows;             // Hva: Definerer radoppsettet.
-                                           // Hvorfor: Gir kontroll på høyden til radene.
-                                           // Hvordan: Bruker mixin-parameteren $rows.
-
-    gap: 1rem;                             // Hva: Avstand mellom grid-celler.
-                                           // Hvorfor: Skaper visuelt luft og lesbarhet.
-                                           // Hvordan: Enhetlig mellomrom i både rader og kolonner.
-}
-
-// ---------- HENTER MIXIN OVER -------------
-
-#grid-layout{
-    @include alterLayout(1fr 1fr, auto auto);
-}
