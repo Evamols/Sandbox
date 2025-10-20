@@ -1,9 +1,17 @@
-@use 'fonts'; /*Henter inn partial som heter fonts*/
-@use 'colors'; /*Henter inn partial som heter colors*/
-@use 'layout'; /*Henter inn partial*/
+@use 'fonts'; // Henter inn partial som heter fonts
+@use 'colors'; // Henter inn partial som heter colors
+@use 'layout'; // Henter inn partial som heter layout
+@use 'components'; // Henter inn partial som heter components
+
+// =========================
+// Global base: <body>
+// =========================
+// Hva: Setter grunnleggende typografi og tekstfarge for hele dokumentet.
+// Hvorfor: Gir et enhetlig utgangspunkt og reduserer behovet for dupliserte regler.
+// Hvordan: Nullstiller margin, definerer font-familie og basis tekstfarge.
 
 body{
     margin: 0;
-    font-family: fonts.$main-font; /*Henter inn variabelen $main-font fra partialen _fonts.*/
-    color: colors.$primary-color; /*Henter inn variabel fra partialen _colors.*/
+    font-family: fonts.$main-font; // Henter inn variabelen $main-font fra partialen _fonts.
+    color: colors.$primary-color; // Henter inn variabel fra partialen _colors.
 }
