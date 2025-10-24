@@ -64,14 +64,111 @@ footer{
     }
 }
 
-// ---------- Endrer på nyhetene ----------------------
+// ---------- Endrer på nyhetene (sidescroll) ----------------------
 
 // En seksjon med nyheter i et scroll-vindu med produkort som inneholder, produktbilde, merke, produktnavn og pris. 
 // Hint: display:flex, flex-direction:row, flex-wrap: nowrap, overflow:scroll.
 
+//.scroll-container{
+//    display: flex;
+//    flex-direction: row;
+//    flex-wrap: nowrap;
+//    overflow: scroll;
+//    white-space: nowrap;
+//}
+
 .scroll-container{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow: scroll;
+    flex-direction: row; 
+    overflow-x: auto; // Apply horizontal scrolling specifically
+    white-space: nowrap; // Prevent elements from wrapping
+    width: 100%;
+    padding: 1rem 0;
+
+}
+
+//Fra KI
+.scroll-container article {
+    flex: 0 0 auto;       // Ensure articles don't shrink
+    margin-right: 1rem;   // Space between articles
+    width: 150px;         // Example width limit, adjust to your needs
+}
+
+.scroll-container img {
+    display: block;
+    max-width: 100%;      // Make images responsive within their containers
+}
+
+
+
+// ---------- Gjør at bakgrunnsbilde til welcome banner blir gjennomsiktig ---------------------
+
+#welcome-banner{
+    position: relative; // Necessary for positioning the pseudo-element relative to this container
+    isolation: isolate;
+}
+
+
+// Putting the background image property on a pseudo element. 
+// Pseudoelements allows you to style certain parts of an element. ::before will act as the first child element of the welcome banner
+#welcome-banner::before{
+    // Lager variabler for å få det mer ryddig og lettere å oppdatere
+    $background-image: url("https://picsum.photos/400/400");
+    $background-image-opacity: 0.3;
+
+    background-image: $background-image; // bruker variabel
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    content: '';
+    position: absolute;
+    inset: 0; // This is the same as changing top, bottom, left and right to 0
+    z-index: -1; // Ensure the pseudo-element is behind the content 
+
+    opacity: $background-image-opacity; // bruker variabel
+}
+
+// ----------- Endrer utseende på welcome banner -------------------------
+
+#welcome-banner{
+    display: flex;
+    border-bottom: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+}
+
+main section header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+// ---------- Endrer utseende på flere greier) ---------------
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 1rem;
+}
+
+// Logo area (katten)
+#logo-area{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+#el, #fashion, #home{
+    display: flex;
+    align-items: end;
+    background-color: #efefef;
+    margin: 1rem;
+
+    h3{
+        margin:1rem;
+    }
 }

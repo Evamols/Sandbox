@@ -52,6 +52,74 @@ footer {
 .scroll-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  overflow: scroll;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.scroll-container article {
+  flex: 0 0 auto;
+  margin-right: 1rem;
+  width: 150px;
+}
+
+.scroll-container img {
+  display: block;
+  max-width: 100%;
+}
+
+#welcome-banner {
+  position: relative;
+  isolation: isolate;
+}
+
+#welcome-banner::before {
+  background-image: url("https://picsum.photos/400/400");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+#welcome-banner {
+  display: flex;
+  border-bottom: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+}
+
+main section header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1rem;
+}
+
+#logo-area {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#el, #fashion, #home {
+  display: flex;
+  align-items: end;
+  background-color: #efefef;
+  margin: 1rem;
+}
+#el h3, #fashion h3, #home h3 {
+  margin: 1rem;
 }/*# sourceMappingURL=main.css.map */
