@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(255, 245, 233);
+}
+
+section{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
