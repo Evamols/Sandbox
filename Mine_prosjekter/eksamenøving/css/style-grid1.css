@@ -1,0 +1,31 @@
+:root{
+    --blue: #59a5bd;;
+}
+
+body{
+    background-color: var(--blue);
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "header header"
+                            "main aside"
+                            "footer footer";
+}
+
+#main-header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer
+}

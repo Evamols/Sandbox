@@ -1,0 +1,33 @@
+:root{
+    --blue: #59a5bd;;
+}
+
+body{
+    background-color: var(--blue);
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+#main-header{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+main{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+aside{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+footer{
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
